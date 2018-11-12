@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-mockchineseidcard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "create chinese id card randomly in insominia rest client",
   "insomnia": {
     "name": "mockchineseidcard",
