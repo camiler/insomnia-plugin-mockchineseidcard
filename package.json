@@ -1,0 +1,26 @@
+{
+  "name": "insomnia-plugin-mockchineseidcard",
+  "version": "1.0.0",
+  "description": "create chinese id card randomly in insominia rest client",
+  "insomnia": {
+    "name": "mockchineseidcard",
+    "description": "mock chinese id card in insominia rest client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camiler/insomnia-plugin-mockchineseidcard.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "insominia",
+    "plugin",
+    "idcard",
+    "chinese"
+  ],
+  "bugs": {
+    "url": "https://github.com/camiler/insomnia-plugin-mockchineseidcard/issues"
+  },
+  "homepage": "https://github.com/camiler/insomnia-plugin-mockchineseidcard#readme",
+  "author": "camiler",
+  "license": "ISC"
+}
