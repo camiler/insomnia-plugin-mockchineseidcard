@@ -1,5 +1,8 @@
 const preSix = require('./preSix');
 const sixArr = Object.keys(preSix);
+
+const weight = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+const validate = ['1','0','X','9','8','7','6','5','4','3','2'];
 /**
  * 填充零
  * @param str 要填充的字符串
@@ -11,6 +14,21 @@ function fixZero(str, total) {
   if (zn === 0) return str;
   const zero = new Array(zn).fill('0').join('');
   return `${zero}${str}`;
+}
+
+/**
+ * 最后一位的生成规则
+ * @param pre17
+ * @returns {string}
+ */
+function genLastNum(pre17) {
+  let sum = 0;
+  weight.forEach((wi, idx) => {
+    sum += pre17[idx] * wi;
+  })
+  const mode = sum%11;
+
+  return validate[mode];
 }
 
 module.exports.templateTags = [{
@@ -52,11 +70,13 @@ module.exports.templateTags = [{
     
     let day = String(Math.ceil(Math.random() * 28));
     day = fixZero(day, 2);
+
+    let seqThree = String(Math.floor(Math.random() * 1000));
+    seqThree = fixZero(seqThree, 3);
+
+    const pre17 = `${sixArr[preSixIndex]}${yearRandom}${month}${day}${seqThree}`;
+    const lastOne = genLastNum(pre17);
     
-    let lastFour = String(Math.floor(Math.random() * 10000));
-    lastFour = fixZero(lastFour, 4);
-    lastFour = Math.random() * 100 < 90 ? lastFour : lastFour.slice(0, 3) + 'X';
-    
-    return `${sixArr[preSixIndex]}${yearRandom}${month}${day}${lastFour}`;
+    return `${pre17}${lastOne}`;
   }
 }]
