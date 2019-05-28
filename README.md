@@ -8,6 +8,6 @@ create chinese id card randomly in insominia rest client
 
 open insominia preferences -> Plugins   
 
-paste `insomnia-plugin-mockchineseidcard` install Plugin 
+paste `insomnia-plugin-mockchineseidcard` , just click `install Plugin`
 
 [download insominia](https://insomnia.rest/)
