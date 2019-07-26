@@ -56,13 +56,13 @@ module.exports.templateTags = [{
     const preSixIndex = Math.floor(Math.random() * sixArr.length);
     const curYear = new Date().getFullYear();
     
-    let yearRandom = Math.floor(Math.random() * (curYear - 1900) + 1900);
+    let yearRandom = Math.floor(curYear - Math.random() * 100);
     
     if (adult === 'adult') {
-      yearRandom = Math.floor(Math.random() * (curYear - 1900 - 18) + 1900);
+      yearRandom = Math.floor((curYear - 19) - (Math.random() * (60 - 18)));
     }
     if (adult === 'minor') {
-      yearRandom = Math.floor(Math.random() * 17) + (curYear - 17);
+      yearRandom = Math.floor(curYear - Math.random() * 17);
     }
     
     let month = String(Math.ceil(Math.random() * 12));
