@@ -2,3 +2,6 @@
 test.js
 .git/
 .history/
+package-lock.json
+.DS_Store
+node_modules/
