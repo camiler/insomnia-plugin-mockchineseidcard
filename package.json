@@ -1,19 +1,20 @@
 {
   "name": "insomnia-plugin-mockchineseidcard",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "create chinese id card randomly in insominia rest client",
   "insomnia": {
     "name": "mockchineseidcard",
-    "description": "mock chinese id card in insominia rest client"
+    "displayName": "mockchineseidcard Plugin",
+    "description": "mock chinese id card in insominia rest client, support for the selection of adult, minor, male or famale"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/camiler/insomnia-plugin-mockchineseidcard.git"
   },
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "rm -fr dist && npx rollup -c",
-    "prepublish": "npm run build",
+    "build": "rm -fr index.js && npx rollup -c",
+    "prepublishOnly": "npm run build",
     "beta": "npm publish --tag beta"
   },
   "files": [
@@ -32,6 +33,10 @@
   "author": "camiler",
   "license": "ISC",
   "devDependencies": {
-    "rollup": "^2.70.0"
+    "rollup": "^2.70.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
